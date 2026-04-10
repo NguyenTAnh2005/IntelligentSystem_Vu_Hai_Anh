@@ -24,9 +24,10 @@ def main():
     print("🔥 Bắt đầu quá trình huấn luyện...")
     model.train(
         data = str(DATA_PATH),
-        epochs=150,
+        epochs= 150,
         imgsz = 224,
         batch = 32,
+        patience = 30, # Sau 30 lần liên tiếp độ chính xác ko tăng thì xác định drop --> tránh học vẹt
         device = device,
         project = str(ROOT_DIR/"reports"),
         name = "yolo_animal_train2",

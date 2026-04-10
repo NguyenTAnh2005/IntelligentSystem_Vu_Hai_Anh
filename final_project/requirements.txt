@@ -1,2 +1,4 @@
 # Thư viện hỗ trợ import YOLOv8
 ultralytics
+
+# Thư viện torch hỗ trợ xem gpu
