@@ -1,6 +1,6 @@
 outs:
-- md5: d751713988987e9331980363e24189ce.dir
-  size: 0
-  nfiles: 0
+- md5: 666a9b1508d1a4897db3eef1efabf2f8.dir
+  size: 30768082
+  nfiles: 5531
   hash: md5
   path: dataset_yolo
