@@ -6,11 +6,9 @@
 # /final_project/models/
 /final_project/runs/
 /final_project/venv/
-/final_project/reports/
-/final_project/yolo26n.pt
-/final_project/yolov8n.pt
-# *.csv
+# /final_project/reports/
+*.csv
 *.zip
-# *.pt
+*.pt
 
 # Các phần 2, 3, 4 ở dưới ní CỨ GIỮ NGUYÊN (vì venv/ viết không có dấu / ở đầu thì nó sẽ tự động chặn mọi thư mục venv dù nằm ở đâu).
