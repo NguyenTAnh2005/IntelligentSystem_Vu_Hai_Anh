@@ -1,0 +1,4 @@
+[core]
+    remote = origin
+['remote "origin"']
+    url = https://dagshub.com/NguyenTAnh2005/IntelligentSystem_Vu_Hai_Anh.dvc
