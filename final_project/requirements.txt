@@ -1,4 +1,29 @@
-# Thư viện hỗ trợ import YOLOv8
-ultralytics
+# ==========================================
+# 1. ÔNG LỚN CNN (XỬ LÝ ẢNH & NHẬN DIỆN AI)
+# ==========================================
+# Thư viện chính của YOLOv8 để load model và train
+ultralytics==8.2.0  
 
-# Thư viện torch hỗ trợ xem gpu
+# Thư viện xử lý ma trận và tính toán số học (YOLO cực kỳ cần)
+numpy
+
+# Thư viện mở Webcam và xử lý khung hình (dùng cho detect_webcam.py)
+opencv-python
+
+# ==========================================
+# 2. ÔNG LỚN LOGIC MỜ (RA QUYẾT ĐỊNH CẢNH BÁO)
+# ==========================================
+# Thư viện thiết lập luật mờ (Fuzzy Logic) dựa trên khoảng cách và loài
+scikit-fuzzy
+
+# ==========================================
+# 3. ÔNG LỚN GIAO TIẾP IOT (TRẠM CHỈ HUY MQTT)
+# ==========================================
+# Thư viện để Python nói chuyện với ESP32 qua giao thức MQTT
+paho-mqtt
+
+# ==========================================
+# 4. TIỆN ÍCH BỔ SUNG
+# ==========================================
+# Để vẽ biểu đồ, đồ thị nếu sau này sếp muốn làm Dashboard
+matplotlib

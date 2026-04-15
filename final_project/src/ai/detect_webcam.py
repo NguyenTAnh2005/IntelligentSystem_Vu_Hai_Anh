@@ -5,7 +5,7 @@ from ultralytics import YOLO
 # 1. THIẾT LẬP ĐƯỜNG DẪN 
 # Vị trí đứng: src/detect_webcam.py -> parent nhảy ra gốc project
 current_file = Path(__file__).resolve()
-ROOT_DIR = current_file.parent.parent
+ROOT_DIR = current_file.parent.parent.parent
 
 # Trỏ thẳng vào file 'best.pt' ní vừa lấy được
 # Chú ý: Hãy chắc chắn ní đã copy file best.pt vào thư mục 'models/' cho gọn gàng nhé.
