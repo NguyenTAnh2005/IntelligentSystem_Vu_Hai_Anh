@@ -5,7 +5,7 @@ from ultralytics import YOLO
 # Lấy vị trí file train.py hiện tại 
 current_file = Path(__file__).resolve()
 # Lùi ra  cấp thư mục gốc, 1 parent --> src, +1 parent --> thư mục gốc final_project
-ROOT_DIR = current_file.parent.parent
+ROOT_DIR = current_file.parent.parent.parent
 # Ghép lại đường dẫn file data.yaml
 DATA_PATH = ROOT_DIR / "data" / "dataset_yolo" / "data.yaml"
 # Nơi sẽ lưu mô hình sau khi train 

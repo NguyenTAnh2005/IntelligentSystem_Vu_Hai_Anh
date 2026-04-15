@@ -1,9 +1,0 @@
-﻿ID_Loai,Ten_Loai,Muc_Hung_Du (0-100),Toc_Do (km/h),Khoang_Cach_An_Toan (m)
-1,boar,7.5,48,30
-2,deer,1,80,10
-3,elephant,7,40,50
-4,goat,1.5,15,2
-5,kangaroo,4,70,10
-6,snake,8,19,5
-7,tiger,9.5,65,100
-8,zebra,4,65,15
