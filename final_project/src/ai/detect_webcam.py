@@ -10,7 +10,7 @@ import paho.mqtt.client as mqtt
 from ultralytics import YOLO
 
 current_file = Path(__file__).resolve()
-ROOT_DIR = current_file.parent.parent
+ROOT_DIR = current_file.parent.parent.parent
 
 MODEL_PATH = ROOT_DIR / "models" / "best.pt" 
 CSV_PATH = ROOT_DIR / "data" / "data_new.csv"
