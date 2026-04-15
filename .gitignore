@@ -4,11 +4,12 @@
 # Cập nhật lại đường dẫn chui vào trong final_project
 # /final_project/data/
 # /final_project/models/
+# /final_project/reports/
 /final_project/runs/
 /final_project/venv/
-# /final_project/reports/
-*.csv
-*.zip
-*.pt
+
+# *.csv
+# *.zip
+# *.pt
 
 # Các phần 2, 3, 4 ở dưới ní CỨ GIỮ NGUYÊN (vì venv/ viết không có dấu / ở đầu thì nó sẽ tự động chặn mọi thư mục venv dù nằm ở đâu).
