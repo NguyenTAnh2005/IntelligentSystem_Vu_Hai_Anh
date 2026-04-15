@@ -7,7 +7,9 @@
 /final_project/runs/
 /final_project/venv/
 /final_project/reports/
-*.csv
+/final_project/yolo26n.pt
+/final_project/yolov8n.pt
+# *.csv
 *.zip
 # *.pt
 
