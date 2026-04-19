@@ -27,7 +27,7 @@ def nhan_dien_yolo(frame):
         return None, 0, frame
 
     # Đưa frame vào mô hình YOLO, verbose=False để Terminal không bị rác chữ
-    results = model(frame, verbose=False) 
+    results = model(frame, verbose=False, conf = 0.6, imgsz=224) 
 
     ten_loai_chinh = None
     do_tin_cay_max = 0
@@ -50,44 +50,3 @@ def nhan_dien_yolo(frame):
                 ten_loai_chinh = ten_loai
 
     return ten_loai_chinh, do_tin_cay_max, frame_ket_qua
-
-
-# =============================================================================
-# 3. PHẦN TEST ĐỘC LẬP (Chỉ chạy khi test trực tiếp file này)
-# =============================================================================
-if __name__ == "__main__":
-    print("🚀 ĐANG KHỞI ĐỘNG BỘ TEST MẮT THẦN (IP WEBCAM)...")
-    
-    # ⚠️ IP TRÊN ĐIỆN THOẠI 
-    URL_CAM = "http://192.168.211.188:8080/video"
-    
-    # Kết nối Camera
-    cap = cv2.VideoCapture(URL_CAM)
-
-    if not cap.isOpened():
-        print("❌ LỖI: Không nối được IP Camera! Vui lòng check lại WiFi hoặc Link IP.")
-        exit()
-
-    print("✅ Kết nối thành công! (Nhấn 'q' để tắt)")
-
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            print("❌ Bị rớt mạng, mất luồng video!")
-            break
-
-        # Đẩy frame vào hàm AI
-        ten_con_vat, do_tin_cay, frame_da_ve = nhan_dien_yolo(frame)
-
-        if ten_con_vat:
-            print(f"🚨 Phát hiện: {ten_con_vat.upper()} - Tỉ lệ chính xác: {do_tin_cay*100:.1f}%")
-
-        # Show hình ảnh có Bounding Box
-        cv2.imshow("TEST VISION - NHOM 3", frame_da_ve)
-
-        # Bấm chữ 'q' trên bàn phím để thoát
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
-    cap.release()
-    cv2.destroyAllWindows()

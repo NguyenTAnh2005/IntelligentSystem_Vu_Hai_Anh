@@ -52,7 +52,7 @@ mo_phong = ctrl.ControlSystemSimulation(he_thong_ctrl)
 # distance: Khoảng cách, aggression: ĐỘ hung dữ 
 def cal_level_of_danger(distance, aggression):
     # 1. Mờ hóa: Đưa giá trị thực vào hệ thống (nhân 10 cho khoảng cách)
-    mo_phong.input['khoang_cach'] = distance * 10
+    mo_phong.input['khoang_cach'] = distance / 10
     mo_phong.input['hung_du'] = aggression
 
     # 2. Thực hiện tính toán (Máy tính tự thực hiện toán tử MAX để tổng hợp các tập mờ)
@@ -61,10 +61,11 @@ def cal_level_of_danger(distance, aggression):
     # 3. Lấy kết quả giải mờ Centroid (Trọng tâm của đa giác tổng hợp)
     ket_qua_percent = mo_phong.output['bao_dong']
 
-    print("=" * 40)
-    print(f"KẾT QUẢ PHÂN TÍCH LOGIC MỜ")
-    print(f"-> Khoảng cách thực tế: {distance * 10}m")
-    print(f"-> Độ hung dữ AI: {aggression}/10")
-    print(f"-> Mức báo động đầu ra: {ket_qua_percent:.2f}%")
-    print("=" * 40)
+    # print("=" * 40)
+    # print(f"KẾT QUẢ PHÂN TÍCH LOGIC MỜ")
+    # print(f"-> Khoảng cách thực tế: {distance * 10}m")
+    # print(f"-> Độ hung dữ AI: {aggression}/10")
+    # print(f"-> Mức báo động đầu ra: {ket_qua_percent:.2f}%")
+    # print("=" * 40)
+    return ket_qua_percent
 
