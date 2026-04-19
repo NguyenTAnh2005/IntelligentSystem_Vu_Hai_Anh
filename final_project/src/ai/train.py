@@ -30,7 +30,7 @@ def main():
         patience = 30, # Sau 30 lần liên tiếp độ chính xác ko tăng thì xác định drop --> tránh học vẹt
         device = device,
         project = str(ROOT_DIR/"reports"),
-        name = "yolo_animal_train2",
+        name = "yolo_animal_train_new",
         save = True,
         plots= True
     )
