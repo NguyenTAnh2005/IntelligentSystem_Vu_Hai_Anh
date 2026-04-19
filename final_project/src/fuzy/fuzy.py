@@ -42,7 +42,7 @@ hung_du['du']   = fuzz.trapmf(hung_du.universe, [6, 8, 10, 10])
 bao_dong['AN_TOAN'] = fuzz.trimf(bao_dong.universe, [0, 0, 25])
 bao_dong['VANG']    = fuzz.trimf(bao_dong.universe, [0, 25, 50])
 bao_dong['DO']      = fuzz.trimf(bao_dong.universe, [25, 50, 75])
-bao_dong['TU_THAN'] = fuzz.trimf(bao_dong.universe, [50, 100, 100])
+bao_dong['TU_THAN'] = fuzz.trimf(bao_dong.universe, [50, 100, 100]) 
 
 # =============================================================================
 # BƯỚC 3: HỆ LUẬT MỜ (9 LUẬT MAMDANI) - Giai đoạn Diễn dịch (Inference)
