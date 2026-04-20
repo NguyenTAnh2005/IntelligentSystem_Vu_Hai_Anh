@@ -17,8 +17,6 @@ current_distance = 100
 def cap_nhat_khoang_cach(new_distance):
     global current_distance
     current_distance = new_distance
-    # Print ngầm để debug, thấy ồn quá sếp có thể comment lại
-    # print(f"\r📏 [ESP32] Khoảng cách: {current_distance} cm   ", end="")
 
 # =============================================================================
 # KHỞI ĐỘNG HỆ THỐNG
