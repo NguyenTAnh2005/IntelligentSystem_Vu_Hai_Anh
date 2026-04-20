@@ -27,7 +27,7 @@ def nhan_dien_yolo(frame):
         return None, 0, frame
 
     # Đưa frame vào mô hình YOLO, verbose=False để Terminal không bị rác chữ
-    results = model(frame, verbose=False, conf = 0.6, imgsz=224) 
+    results = model(frame, verbose=False, conf = 0.55, imgsz=224) 
 
     ten_loai_chinh = None
     do_tin_cay_max = 0
