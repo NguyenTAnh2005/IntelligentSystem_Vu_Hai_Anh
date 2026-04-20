@@ -87,7 +87,7 @@ try:
                 # BƯỚC D: Bắn lệnh xuống MQTT cho ESP32
                 gui_canh_bao(phan_tram_nguy_hiem)
                 
-                print(f"\r🚨 [PHÁT HIỆN]: {ten_loai.upper()} | Hung dữ: {muc_hung_du} | Cách: {current_distance:.2f}m -> BÁO ĐỘNG: {phan_tram_nguy_hiem}%", end="")
+                print(f"\r🚨 [PHÁT HIỆN]: {ten_loai.upper()} | Hung dữ: {muc_hung_du} | Cách: {current_distance/10:.2f}m -> BÁO ĐỘNG: {phan_tram_nguy_hiem}%", end="")
                 
                 # CẬP NHẬT LẠI BIẾN HIỂN THỊ VÌ CÓ THÚ
                 ten_hien_thi = ten_loai.upper()
@@ -103,7 +103,7 @@ try:
         cv2.putText(frame_da_ve, f"Doi tuong: {ten_hien_thi}", (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 255), 2)
 
         # Dòng 2: Khoảng cách (Màu Xanh lơ)
-        cv2.putText(frame_da_ve, f"Khoang cach: {current_distance:.2f} m", (10, 80), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 255, 0), 2)
+        cv2.putText(frame_da_ve, f"Khoang cach: {current_distance/10:.2f} m", (10, 80), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 255, 0), 2)
 
         # Dòng 3: Mức cảnh báo (Màu Đỏ)
         cv2.putText(frame_da_ve, f"Muc canh bao: {nguy_hiem_hien_thi:.2f}%", (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 0, 255), 3)
