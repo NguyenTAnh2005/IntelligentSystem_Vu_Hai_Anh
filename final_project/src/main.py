@@ -43,7 +43,7 @@ time.sleep(1) # Chờ 1 giây cho mạng thông suốt
 
 # 4. Kích hoạt Camera
 # ⚠️ CHÚ Ý 2: Sếp nhớ đổi lại cái IP này theo đúng IP trên điện thoại nhé!
-URL_CAM = "http://192.168.1.15:8080/video" 
+URL_CAM = "http://192.168.1.7:8080/video" 
 cap = cv2.VideoCapture(URL_CAM)
 
 if not cap.isOpened():
